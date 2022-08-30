@@ -8,9 +8,7 @@ $flex-map: (
 );
 
 @function _get-flex-value($key) {
-  @if ($key == start) {
-    @return map-get($flex-map, $key);
-  }
+  @return map-get($flex-map, $key);
 }
 
 @mixin flexbox($jc: center, $al: center) {
