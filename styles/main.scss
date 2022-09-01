@@ -7,8 +7,6 @@
 @import './base/reset';
 @import './base/globals';
 
-@import './layouts/grids';
-
 @import './mixins/text-style';
 @import './mixins/responsive';
 @import './mixins/positions';
@@ -23,4 +21,7 @@
 @import './modules/pagenation';
 @import './modules/icons';
 
+@import './components/gnb-nav';
+
+@import './layouts/grids';
 @import './layouts/gnb';
