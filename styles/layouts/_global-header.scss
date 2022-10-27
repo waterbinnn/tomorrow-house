@@ -1,6 +1,6 @@
 .global-header {
   width: 100%;
-  height: $gnb-height-sm + $lnb-height-md;
+  height: $gnb-height-sm + $lnb-height-sm;
 
   .gnb,
   .lnb {
@@ -21,9 +21,9 @@
 
   @include responsive(T) {
     height: $gnb-height-md + $lnb-height-md;
-  }
 
-  .lnb {
-    top: $gnb-height-md;
+    .lnb {
+      top: $gnb-height-md;
+    }
   }
 }
