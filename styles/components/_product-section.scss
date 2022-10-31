@@ -1,0 +1,20 @@
+.product-section {
+  padding-bottom: 20px;
+
+  &-divider {
+    height: 8px;
+    margin: 0 -15px; //todo: grid constant로 빼기!
+    background-color: $border;
+  }
+
+  @include responsive(T) {
+    width: 100%;
+    max-width: 629px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  @include responsive(D) {
+    margin-left: 0;
+  }
+}
