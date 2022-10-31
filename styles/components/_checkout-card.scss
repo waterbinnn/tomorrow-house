@@ -23,11 +23,25 @@
     height: 20px;
     font-size: 20px;
     color: $secondary;
+
+    &:hover,
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   .checkout-select {
     position: relative;
     display: inline-block;
+
+    &:hover {
+      select {
+        border-color: $tertiary;
+      }
+      i {
+        color: $secondary;
+      }
+    }
 
     select {
       @include text-style(14, $primary);
@@ -39,6 +53,7 @@
       border-radius: 4px;
       line-height: 1;
       appearance: none;
+      transition: all 100ms ease-in;
     }
 
     .ic-caret {
