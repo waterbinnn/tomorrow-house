@@ -20,20 +20,20 @@
 
     &.tns-nav-active {
       button {
-        background-color: $white;
         opacity: 1;
-        transform: scale(1.3333333);
+        transform: scale(1.333333);
       }
     }
 
     button {
       width: 6px;
       height: 6px;
-      border-radius: 50%;
       background-color: $white;
+      border-radius: 50%;
       opacity: 0.7;
-      transition: all 100ms ease-in-out;
+      transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
     }
+
     img {
       display: none;
     }
@@ -50,8 +50,8 @@
 
     &-slider {
       margin: 0 0 8px 0;
-      border-radius: 4px;
       overflow: hidden;
+      border-radius: 4px;
     }
 
     &-thumbnail {
@@ -74,7 +74,7 @@
       }
 
       button {
-        @include flexbox(center);
+        @include flexbox;
         width: 56px;
         height: 56px;
         overflow: hidden;
@@ -88,6 +88,7 @@
       }
     }
   }
+
   @include responsive(D) {
     @include flexbox(end, start);
     flex-direction: row-reverse;
@@ -106,7 +107,9 @@
     }
 
     .thumbnail-item {
-      margin: 0 0 8px 0;
+      margin-right: 0;
+      margin-bottom: 8px;
+
       button,
       img {
         width: 75px;
