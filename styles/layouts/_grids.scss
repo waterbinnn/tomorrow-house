@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /*
  MOBILE (<768px) ------------
  # fixture ................. sm
@@ -38,13 +40,13 @@ Tablet (>768px) ------------
 
   //.col-
   [class^='col-'] {
-    padding: 0 $gutter / 2;
+    padding: 0 math.div($gutter, 2);
   }
 
   @for $i from 1 through $sm-columns {
     .col-sm-#{$i} {
       // width: $i / $sm-columns * 100%;
-      width: percentage($i / $sm-columns);
+      width: percentage(math.div($i, $sm-columns));
     }
   }
   @media screen and (min-width: $md-breakpoint) {
@@ -53,7 +55,7 @@ Tablet (>768px) ------------
 
     @for $i from 1 through $md-columns {
       .col-md-#{$i} {
-        width: percentage($i / $md-columns);
+        width: percentage(math.div($i, $md-columns));
       }
     }
   }

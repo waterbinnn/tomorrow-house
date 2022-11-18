@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .product-tab {
   position: sticky;
   top: $gnb-height-sm + $lnb-height-sm;
@@ -12,7 +14,7 @@
     margin: 0 -#{$grid-margin};
   }
   &-item {
-    width: (100% / 5);
+    width: math.div(100%, 5);
 
     &.is-active {
       button {

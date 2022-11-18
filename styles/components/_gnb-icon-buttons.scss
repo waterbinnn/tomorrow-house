@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .gnb-icon-button {
   $badge-size: 16px;
 
@@ -43,7 +45,7 @@
     text-align: center;
     letter-spacing: -0.01em;
     color: $white;
-    border-radius: $badge-size/2;
+    border-radius: math.div($badge-size, 2);
   }
 
   @include responsive(T) {
