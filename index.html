@@ -1877,10 +1877,10 @@
       </button>
 
       <!-- NOTE: 북마크 했을 때  -->
-      <!-- <button class="btn-ghost btn btn-48 is-active" type="button">
+      <!-- <button class="btn-ghost btn btn-48 " type="button">
         <i class="ic-bookmark-filled" aria-hidden></i>
         <span aria-label="북마크 18,302회">18,302</span>
-      </button>  -->
+      </button> -->
       <button class="btn-primary btn btn-40" type="button">구매하기</button>
     </div>
 
@@ -2163,9 +2163,10 @@
     </div>
   </aside>
 
-  <aside class="order-form-modal">
+  <aside class="order-form-modal lg-hidden">
     <h1 class="visually-hidden">주문창</h1>
-    <form class="order-form lg-hidden" action="/" method="POST">
+
+    <form class="order-form" action="/" method="POST">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
@@ -2173,22 +2174,22 @@
               <div class="select-group is-active">
                 <select class="form-select" id="order-form-modal-select-1" required>
                   <option value="">선택</option>
-                  <option value="1">선택사항</option>
-                  <option value="2">선택사항</option>
-                  <option value="3">선택사항</option>
-                  <option value="4">선택사항</option>
-                  <option value="5">선택사항</option>
+                  <option value="1">선택사항 1</option>
+                  <option value="2">선택사항 2</option>
+                  <option value="3">선택사항 3</option>
+                  <option value="4">선택사항 4</option>
+                  <option value="5">선택사항 5</option>
                 </select>
                 <i class="ic-caret" aria-hidden></i>
               </div>
               <div class="select-group">
                 <select class="form-select" id="order-form-modal-select-2">
-                  <option value="">추가상품(선택)</option>
-                  <option value="1">선택사항</option>
-                  <option value="2">선택사항</option>
-                  <option value="3">선택사항</option>
-                  <option value="4">선택사항</option>
-                  <option value="5">선택사항</option>
+                  <option value="">추가상품 (선택)</option>
+                  <option value="1">선택사항 1</option>
+                  <option value="2">선택사항 2</option>
+                  <option value="3">선택사항 3</option>
+                  <option value="4">선택사항 4</option>
+                  <option value="5">선택사항 5</option>
                 </select>
                 <i class="ic-caret" aria-hidden></i>
               </div>
@@ -2198,11 +2199,9 @@
               <ul class="checkout-list">
                 <li class="checkout-item">
                   <div class="checkout-card">
-
                     <header class="checkout-header">
-                      <h4 class="checkout-title">추가상품 - 맛있는 제주 감귤을 직배송 / 제주도 귤 판매 1위 믿고 구매하세요.</h4>
-
-                      <button class="delete-button" type="button" aria-label="해당 상품 삭제">
+                      <h4 class="checkout-title">화이트</h4>
+                      <button class="delete-button" type="button" aria-label="해당 상품을 삭제하기">
                         <i class="ic-close" aria-hidden></i>
                       </button>
                     </header>
@@ -2226,7 +2225,39 @@
                         </div>
                       </output>
                     </footer>
+                  </div>
+                </li>
+                <li class="checkout-item">
+                  <div class="checkout-card">
+                    <header class="checkout-header">
+                      <h4 class="checkout-title">
+                        추가상품 - 귤무덤 패키지 / 제주감귤 3kg / 온라인 감귤
+                        판매 1위
+                      </h4>
+                      <button class="delete-button" type="button" aria-label="해당 상품을 삭제하기">
+                        <i class="ic-close" aria-hidden></i>
+                      </button>
+                    </header>
 
+                    <footer class="checkout-footer">
+                      <div class="checkout-select">
+                        <select id="order-form-modal-checkout-item-2">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <i class="ic-caret" aria-hidden></i>
+                      </div>
+
+                      <output class="checkout-output" for="order-form-modal-checkout-item-2">
+                        <div class="price-16">
+                          <strong class="amount">30,000</strong>
+                          <span class="currency">원</span>
+                        </div>
+                      </output>
+                    </footer>
                   </div>
                 </li>
               </ul>
@@ -2237,7 +2268,7 @@
               <dd>
                 <output for="order-form-modal-select-1 order-form-modal-select-2">
                   <div class="price-20">
-                    <strong class="amount">0</strong>
+                    <strong class="amount">62,900</strong>
                     <span class="currency">원</span>
                   </div>
                 </output>
@@ -2248,8 +2279,8 @@
       </div>
 
       <div class="btn-group">
-        <button type="button" class="btn-secondary btn-55">장바구니</button>
-        <button type="submit" class="btn-primary btn-55">구매하기</button>
+        <button class="btn-secondary btn-48" type="button">장바구니</button>
+        <button class="btn-primary btn-48" type="submit">구매하기</button>
       </div>
     </form>
   </aside>
@@ -2262,6 +2293,7 @@
   <script src="./js/sidebar-drawer.js"></script>
   <script src="./js/section-header.js"></script>
   <script src="./js/search-modal.js"></script>
+  <script src="./js/order-cta.js"></script>
 </body>
 
 </html>
