@@ -32,6 +32,7 @@ function toggleOrderCtaBookmark() {
     icon.classList.remove('ic-bookmark')
     newCount = newCount + 1
   }
+  countSpan.setAttribute('aria-label', `북마크 ${newCount.toLocaleString()}회`)
   countSpan.innerHTML = newCount.toLocaleString()
 
   this.classList.toggle('is-active')
